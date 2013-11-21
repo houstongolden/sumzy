@@ -2,7 +2,15 @@ Sumzy::Application.routes.draw do
 
 
   root 'welcome#index'
+  resources :sessions
+  resources :users
 
+  get 'users/:id', to: 'users#show'
+
+  # OmniAuth Stuff
+  match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
+  match '/auth/failure', to: redirect('/'), via: [:get, :post]
+  match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
 
 
 

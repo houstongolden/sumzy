@@ -9,6 +9,11 @@ gem 'rails', '4.0.0'
 # Postgres is best.
 gem 'pg'
 
+gem 'omniauth-facebook'
+gem 'figaro'
+
+
+
 # Use for Heroku Deployment
 gem 'rails_12factor', group: :production
 
