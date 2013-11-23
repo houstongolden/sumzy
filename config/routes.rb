@@ -4,6 +4,8 @@ Sumzy::Application.routes.draw do
   root 'welcome#index'
   resources :sessions
   resources :users
+  resources :pages
+  resources :profiles
 
   get 'users/:id', to: 'users#show'
 

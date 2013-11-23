@@ -1,5 +1,15 @@
 class User < ActiveRecord::Base
   
+  has_one :profile
+
+
+  after_create :create_profile
+
+  def create_profile
+    user = User.last
+    profile = Profile.create(contact_email: user.email, user_id: user.id)
+  end 
+
   def self.from_omniauth(auth)
     omniauth_using_facebook(auth) if auth.provider == 'facebook'
     omniauth_using_twitter(auth) if auth.provider == 'twitter' 

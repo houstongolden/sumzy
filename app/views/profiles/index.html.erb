@@ -1,0 +1,15 @@
+<div class="profiles">
+	
+	<h1>Sumzy Profiles</h1>
+
+	<% @profiles.each do |p| %>
+
+		<p>
+			
+			<%= link_to p.contact_email, profile_path(p) %> |
+			<%= pluralize(p.microposts.count, 'status update') %>
+		</p>
+
+	<% end %>
+
+</div>

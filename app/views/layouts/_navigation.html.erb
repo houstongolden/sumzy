@@ -13,13 +13,23 @@
   </ul>
 
   <ul class="nav pull-right" style="margin-top: 6px;">
+
+  <li><%= link_to 'About', :controller => "pages", :action => "about" %></li>
+
   <% if current_user %>
     <%= "#{current_user.first_name} in the house" %>
+
+       <%= link_to(image_tag("http://icons.iconarchive.com/icons/visualpharm/ios7v2/48/Users-User-male-2-icon.png"), profile_path(current_user), :class => "profile_link") %>
+
     <%= link_to "Sign out", signout_path %>
   <% else %>
     <%= link_to "Sign in", new_session_path %>
   <% end %>
   </ul>
+
+
+
+
 
 </div>
 
