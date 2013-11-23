@@ -15,8 +15,4 @@
 /log/*.log
 /tmp
 
-
-# Ignore Omniauth tokens
-config/initializers/omniauth.rb
-# Ignore application configuration
-/config/application.yml
+logfile

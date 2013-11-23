@@ -13,8 +13,13 @@
   </ul>
 
   <ul class="nav pull-right" style="margin-top: 6px;">
-
-   </ul>
+  <% if current_user %>
+    <%= "#{current_user.first_name} in the house" %>
+    <%= link_to "Sign out", signout_path %>
+  <% else %>
+    <%= link_to "Sign in", new_session_path %>
+  <% end %>
+  </ul>
 
 </div>
 

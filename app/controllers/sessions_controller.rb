@@ -5,15 +5,15 @@ class SessionsController < ApplicationController
   end
 
   def create
-      user = User.from_omniauth(env["omniauth.auth"])
-      logger.info env["omniauth.auth"]
-      session[:user_id] = user.id
-      redirect_to user_url(user)
+    user = User.from_omniauth(env["omniauth.auth"])
+    require 'pry';binding.pry
+    session[:user_id] = user.id
+    redirect_to root_url, notice: "Signed in!"
   end
-
+  
   def destroy
-    reset_session
-    redirect_to root_url
+    session[:user_id] = nil
+    redirect_to root_url, notice: "Signed out!"
   end
 
   def failure
