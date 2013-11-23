@@ -17,6 +17,7 @@ gem 'jbuilder', '~> 1.2'
 group :development do
   gem 'awesome_print'
   gem 'pry-rails'
+  gem 'pry-nav'
 end
 
 group :doc do
