@@ -6,11 +6,27 @@
       </a></li>
   </ul>
 
+
+
   <ul class="nav pull-right" style="float: right; margin-right: 50px;">
+    
+    <li>
+      <%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-search-navbar-icon-sm2.png"), pages_search_path('search'), :class => "profile_link") %>
+    </li>
+    <li>
+      <%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-photos-navbar-icon-sm2.png"), pages_photos_path('photos'), :class => "profile_link") %>
+    </li>
+    <li>
+      <%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-music-navbar-icon-sm2.png"), pages_music_path('music'), :class => "profile_link") %>
+    </li>
+    <li>
+      <%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-video-navbar-icon-sm2.png"), pages_videos_path('videos'), :class => "profile_link") %>
+    </li> 
+    
 
-    <li><%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-messages-navbar-icon-1.png"), pages_inbox_path('inbox'), :class => "profile_link") %></li>
+    <li><%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-messages-navbar-icon-sm2.png"), pages_inbox_path('inbox'), :class => "profile_link") %></li>
 
-    <li><%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-settings-navbar-icon-1.png"), pages_settings_path('settings'), :class => "profile_link") %></li>
+    <li><%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-settings-navbar-icon-sm2.png"), pages_settings_path('settings'), :class => "profile_link") %></li>
     
     <li>
     <% if current_user %>
