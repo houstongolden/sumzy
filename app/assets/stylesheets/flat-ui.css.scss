@@ -956,7 +956,10 @@ fieldset[disabled] .btn-link:focus {
   font-size: 22px;
   border-radius: 6px;
   border: none;
+  background-color: rgba(255,255,255,0.4);
 }
+
+
 .navbar .navbar-brand {
   border-radius: 6px 0 0 6px;
   color: #526476;
@@ -1338,13 +1341,9 @@ fieldset[disabled] .btn-link:focus {
   font-size: 16px;
 }
 .navbar.navbar-fixed-bottom .navbar-inner .navbar-form .form-control,
-.navbar.navbar-fixed-top .navbar-inner .navbar-form .form-control {
-  border-radius: 50px 0 0 50px !important;
-}
+
 .navbar.navbar-fixed-bottom .navbar-inner .navbar-form .btn,
-.navbar.navbar-fixed-top .navbar-inner .navbar-form .btn {
-  border-radius: 0 50px 0px 0;
-}
+
 .navbar.navbar-fixed-bottom .nav > li:hover > ul {
   bottom: 100%;
   padding-bottom: 13px;

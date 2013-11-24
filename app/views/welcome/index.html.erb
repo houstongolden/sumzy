@@ -4,29 +4,29 @@
 
 <br />
 
-    <div class="center" >
-            <img class="center" alt="Sumzy" src="http://cloud-media.com/wp-content/uploads/2013/11/Sumzy-Beta-Logo-Smaller-1.png">
-            <br />
-    				<h3 style="text-align: center; font-size: 18px">"Summarize Your Social Media"</h3>
 
+
+    <div class="center" >
+      
+         <h1 style="text-align: center; font-family: 'Raleway', sans-serif;">"Summarize Your Social Media"</h1>
+         <br />
+            <img class="center" alt="Sumzy" src="http://cloud-media.com/wp-content/uploads/2013/11/Sumzy-Beta-Logo-Smaller-1.png">
+           
     </div>
 
-    <br />
-    <br />
-
-
-
-
-    <div class="center">
-<br/>
-    <h3>Sign Up via Facebook or Twitter!</h3>
+    <div class="center" style="text-align: center; font-family: 'Raleway', sans-serif;">
+    <h3 style="text-align: center; font-family: 'Raleway', sans-serif;">Sign Up via Facebook or Twitter!</h3>
      Then sync all your other accounts.
     <br />
 
-     <%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/facebook-login-logo.png"), "/auth/facebook", :class => "profile_link") %>
-     <br />
+        <div class="login_buttons_1" style="display: inline-block; margin-left: -200px; width: 260px;">
+            <%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/facebook-login-logo.png"), "/auth/facebook", :class => "profile_link") %>
+        </div>
+        <div class="login_buttons_1" style="display: inline-block; margin: 5px 0 0 0; padding: 5px 0 0 0; width: 260px;">   
+            <%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/twitter-login-logo.png"), "/auth/twitter", :class => "profile_link") %>
+        </div>
 
-     <%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/twitter-login-logo.png"), "/auth/twitter", :class => "profile_link") %>
+             
 
     </div>
 
