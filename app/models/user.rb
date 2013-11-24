@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
 
   after_create :create_profile
 
+  include Facebook
+  
   def create_profile
     user = User.last
     profile = Profile.create(contact_email: user.email, user_id: user.id)

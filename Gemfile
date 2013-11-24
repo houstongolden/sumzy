@@ -5,6 +5,7 @@ gem 'pg'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'figaro'
+gem 'koala'
 gem 'rails_12factor', group: :production
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
