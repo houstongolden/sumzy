@@ -16,7 +16,7 @@ module Facebook
  
   end
 
-  def write_to_wall(message)
+  def post(message)
     facebook_api_object.put_connections("me", "feed", :message => message)
   end
 
