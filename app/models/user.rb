@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
 
   after_create :create_profile
 
+  include Facebook
+  
   def create_profile
     user = User.last
     profile = Profile.create(contact_email: user.email, user_id: user.id)
@@ -29,6 +31,8 @@ class User < ActiveRecord::Base
     self.last_name = auth.info.last_name
     self.email = auth.info.email
     self.gender = auth.extra.raw_info.gender
+    self.location = auth.info.location
+    self.remote_image_url = auth.info.image
     self.facebook_uid = auth.uid
     self.facebook_token = auth.credentials.token
     self.facebook_expires_at = Time.at(auth.credentials.expires_at)
@@ -36,6 +40,7 @@ class User < ActiveRecord::Base
 
   def create_from_omniauth_twitter(auth)
     self.first_name = auth.info.name
+    self.remote_image_url = auth.info.image
     self.twitter_uid = auth.uid
     self.location = auth.info.location
     self.twitter_token = auth.credentials.token
