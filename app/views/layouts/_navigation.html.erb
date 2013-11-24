@@ -1,34 +1,19 @@
 <div class="navbar">
 
-  <ul class="nav" style="margin-top: -5px;">
-    <li><a href="/">
-        <img alt="Sumzy" src="http://cloud-media.com/wp-content/uploads/2013/11/Sumzy-Beta-NavBar-Logo-Smaller-1.png">
-      </a></li>
-  </ul>
-
   <ul class="nav" style="margin-top: 6px;">
     
-    
-   
-  </ul>
-
-  <ul class="nav pull-right" style="margin-top: 6px;">
-
-    <li><%= link_to 'About', pages_about_path%></li>
-    <li><%= link_to 'Dashboard', pages_dashboard_path%></li>
-    <li><%= link_to 'Inbox', pages_inbox_path%></li>
-    <li><%= link_to 'Help', pages_help_path%></li>
-    <li><%= link_to 'Settings', pages_settings_path%></li>
-
-    <% if current_user %>
-      <%= "#{current_user.first_name}" %>
-
-         <%= link_to(image_tag("http://icons.iconarchive.com/icons/visualpharm/ios7v2/48/Users-User-male-2-icon.png"), profile_path(current_user), :class => "profile_link") %>
-
-      <%= link_to "Sign out", signout_path %>
-    <% else %>
-      <%= link_to "Sign in", new_session_path %>
-    <% end %>
+    <li>
+      <%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-navbar-search-icon-1.png"), pages_search_path('search'), :class => "profile_link") %>
+    </li>
+    <li>
+      <%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-photo-navbar-icon-1.png"), pages_photos_path('photos'), :class => "profile_link") %>
+    </li>
+    <li>
+      <%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-music-navbar-icon-1.png"), pages_music_path('music'), :class => "profile_link") %>
+    </li>
+    <li>
+      <%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-video-navbar-icon-1.png"), pages_videos_path('videos'), :class => "profile_link") %>
+    </li>   
 
   </ul>
 

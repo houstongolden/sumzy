@@ -1,0 +1,30 @@
+<div class="navbar">
+
+  <ul class="nav" style="margin-top: -5px;">
+    <li><a href="/">
+        <img alt="Sumzy" src="http://cloud-media.com/wp-content/uploads/2013/11/Sumzy-Beta-NavBar-Logo-Smaller-1.png">
+      </a></li>
+  </ul>
+
+  <ul class="nav pull-right" style="float: right; margin-right: 50px;">
+
+    <li><%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-messages-navbar-icon-1.png"), pages_inbox_path('inbox'), :class => "profile_link") %></li>
+
+    <li><%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-settings-navbar-icon-1.png"), pages_settings_path('settings'), :class => "profile_link") %></li>
+    
+    <li>
+    <% if current_user %>
+      <%# "#{current_user.first_name}" %>
+      <%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-profile-navbar-icon-1.png"), profile_path(current_user), :class => "profile_link") %>
+
+      <%# link_to "Sign out", signout_path %>
+    <% else %>
+      <%= link_to "Sign in", new_session_path %>
+    <% end %>
+  </li>
+
+  </ul>
+
+</div>
+
+<br />

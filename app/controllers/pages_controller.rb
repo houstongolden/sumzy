@@ -18,5 +18,13 @@ class PagesController < ApplicationController
 	def settings
 	end
 
+	def music
+	end
+
+	def videos
+	end
+
+	def search
+	end
 
 end

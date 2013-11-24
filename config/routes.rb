@@ -11,6 +11,11 @@ Sumzy::Application.routes.draw do
   get '/pages/dashboard', to: 'pages#dashboard'
   get '/pages/settings', to: 'pages#settings'
   get '/pages/inbox', to: 'pages#inbox'
+  get '/pages/search', to: 'pages#search'
+  get '/pages/music', to: 'pages#music'
+  get '/pages/photos', to: 'pages#photos'
+  get '/pages/videos', to: 'pages#videos'
+  
 
 
 
