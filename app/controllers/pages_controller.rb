@@ -3,6 +3,10 @@ class PagesController < ApplicationController
 		@user = User.new
 	end
 
+	def photos
+		@feeds = current_user.get_facebook_feed
+	end
+
 	def about
 	end
 

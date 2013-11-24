@@ -1,11 +1,11 @@
-<div class="profiles">
+<div class="sign_up_text">
 	
 	<h1>Sumzy Profiles</h1>
 
 	<% @profiles.each do |p| %>
 
 		<p>
-			
+			<%= link_to(image_tag(current_user.remote_image_url), profile_path(current_user), :class => "profile_img" ) %>
 			<%= link_to p.contact_email, profile_path(p) %> |
 			<%= pluralize(p.microposts.count, 'status update') %>
 		</p>

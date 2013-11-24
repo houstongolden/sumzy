@@ -8,3 +8,7 @@
   float: left;
   cursor:pointer;
   }
+
+#feed_container {
+	margin-top: 0px;
+}

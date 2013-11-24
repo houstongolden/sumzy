@@ -1,0 +1,4 @@
+<div class='feed_item'>
+	
+  <img src="<%= feed_item['attachment']['media'][0]['src'] if feed_item.has_key?('attachment') && feed_item['attachment'].size > 1 %>">
+</div>

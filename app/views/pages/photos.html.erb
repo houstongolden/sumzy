@@ -1,1 +1,5 @@
-<h1>Photos</h1>
+<h1 style="text-align: center; font-family: 'Raleway', sans-serif; margin-top: -100px;">Sumzy Photos</h1>
+
+<div id="feed_container">
+  <%= render partial: "feed", collection: @feeds, as: :feed_item %>
+</div>
