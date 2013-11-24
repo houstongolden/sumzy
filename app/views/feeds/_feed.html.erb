@@ -1,10 +1,6 @@
-<h1>via Facebook</h1>
-
-
-<%= feed_item['post_id'] %><br>
-<%= feed_item['actor_id'] %><br>
-<%= feed_item['message'] %><br>
-<%= feed_item['attachment']['media'][0]['src'] if feed_item.has_key?('attachment') && feed_item['attachment'].size > 1 %>
-
-<br />
-
+<div class='feed_item'>
+  <%= feed_item['post_id'] %><br>
+  <%= feed_item['actor_id'] %><br>
+  <%= feed_item['message'] %><br>
+  <%= feed_item['attachment']['media'][0]['src'] if feed_item.has_key?('attachment') && feed_item['attachment'].size > 1 %>
+</div>
