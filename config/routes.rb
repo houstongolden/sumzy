@@ -6,6 +6,10 @@ Sumzy::Application.routes.draw do
   resources :users
   resources :profiles
 
+  get '/feeds', to: 'feeds#index'
+
+
+
   get '/pages/about', to: 'pages#about'
   get '/pages/help', to: 'pages#help'
   get '/pages/dashboard', to: 'pages#dashboard'
@@ -15,7 +19,7 @@ Sumzy::Application.routes.draw do
   get '/pages/music', to: 'pages#music'
   get '/pages/photos', to: 'pages#photos'
   get '/pages/videos', to: 'pages#videos'
-  
+
 
 
 

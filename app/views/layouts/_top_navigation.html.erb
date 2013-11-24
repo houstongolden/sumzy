@@ -15,7 +15,7 @@
     <li>
     <% if current_user %>
       <%# "#{current_user.first_name}" %>
-      <%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-profile-navbar-icon-1.png"), profile_path(current_user), :class => "profile_link") %>
+      <%= link_to(image_tag(current_user.remote_image_url), profile_path(current_user), :class => "profile_link" )%>
 
       <%# link_to "Sign out", signout_path %>
     <% else %>
