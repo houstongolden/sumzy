@@ -1,14 +1,14 @@
-module Facebook
+module FacebookHelper
 
-  def get_basic_info
+  def get_facebook_basic_info
     facebook_api_object.get_object("me")
   end
 
-  def get_friends
+  def get_facebook_friends
     facebook_api_object.get_connections("me", "friends")
   end
 
-  def get_feed
+  def get_facebook_feed
     #to = Time.now.to_i
     #yest = 1.year.ago.to_i
     facebook_api_object.fql_query("SELECT post_id, actor_id, target_id, message, attachment FROM stream WHERE filter_key in (SELECT filter_key FROM stream_filter WHERE uid=me() AND type='newsfeed') AND is_hidden = 0")
@@ -16,7 +16,7 @@ module Facebook
  
   end
 
-  def write_to_wall(message)
+  def post(message)
     facebook_api_object.put_connections("me", "feed", :message => message)
   end
 
