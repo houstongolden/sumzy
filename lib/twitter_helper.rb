@@ -1,14 +1,21 @@
 module TwitterHelper
 
-  def tweet(message)
-    twitter_api_object(twitter_token, twitter_secret).update(message)
+  def post_on_twitter(message)
+    twitter_api_object.update(message)
+  end
+
+  def get_twitter_friends
+    twitter_api_object.friends
   end
   
+  def get_twitter_feed
+    twitter_api_object.home_timeline(include_entities:true)  
+  end
   
-  
+  private
 
-  def twitter_api_object(user_token, user_secret)
-    Twitter::REST::Client.new(consumer_key:sumzy_twitter_key, consumer_secret:sumzy_twitter_secret, oauth_token:user_token, oauth_token_secret:user_secret)
+  def twitter_api_object
+    Twitter::REST::Client.new(consumer_key:sumzy_twitter_key, consumer_secret:sumzy_twitter_secret, oauth_token:twitter_token, oauth_token_secret:twitter_secret)
   end
 
   def sumzy_twitter_key
