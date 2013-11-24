@@ -59,7 +59,7 @@ class ProfilesController < ApplicationController
 private
 	
 	def profile_params
-		params.require(:profile).permit( :format, :first_name, :last_name, :contact_email, :content, :photo, :facebook_url, :twitter_url, :instagram_url, :tumblr_url, :pinterest_url, :soundcloud_url, :youtube_url, :linkedin_url, :bio)
+		params.require(:profile).permit( :format, :first_name, :last_name, :contact_email, :content, :photo, :facebook_url, :twitter_url, :google_url, :instagram_url, :tumblr_url, :pinterest_url, :soundcloud_url, :youtube_url, :linkedin_url, :bio)
 	end
 
 	def post_params

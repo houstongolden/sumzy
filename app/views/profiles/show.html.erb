@@ -1,54 +1,69 @@
-<div class="profiles" style="text-align: center; margin-left: 20px;">
+<div class="navbar" style="margin-top: -200px;">
 
-	<h1> <%= @profile.first_name %> <%= @profile.last_name %></h1>
-	<h3> <%= @profile.contact_email %> </h3>
+  <ul class="nav pull-left">
 
-	<p><% if current_user.profile.id == @profile.id %>
-		<%= link_to "Edit Profile", edit_profile_path %> | 
-		
-		<%= link_to "View All Profiles", profiles_path, :class => "sign_up_text" %>
+      <li>
+            <% if @profile.facebook_url %>
+              <p>
+                <a href="<%= @profile.facebook_url %>" target="_blank"><img src="http://cloud-media.com/wp-content/uploads/2013/11/sumzy-facebook-icon-sm1.png">
+                </a>
+              </p>
+            <% end %>
+      </li>
 
-	<% end %></p>
-		
-		<% if @profile.facebook_url %>
-			<p><%= @profile.facebook_url %></p>
-		<% end %>
-		
-		<% if @profile.twitter_url %>
-			<p><%= @profile.twitter_url %></p>
-		<% end %>
+      <li>
+    
+        <% if @profile.twitter_url %>
+          <p>
+            <a href="<%= @profile.twitter_url %>" target="_blank"><img src="http://cloud-media.com/wp-content/uploads/2013/11/sumzy-twitter-icon-sm1.png">
+            </p>
+        <% end %>
 
-		<% if @profile.instagram_url %>
-			<p><%= @profile.instagram_url %></p>
-		<% end %>
+      </li> 
 
-		<% if @profile.linkedin_url %>
-			<p><%= @profile.linkedin_url %></p>
-		<% end %>
+            <li>
+    
+        <% if @profile.tumblr_url %>
+          <p>
+            <a href="<%= @profile.tumblr_url %>" target="_blank"><img src="http://cloud-media.com/wp-content/uploads/2013/11/sumzy-tumblr-icon-sm1.png">
+            </p>
+        <% end %>
 
-		<% if @profile.pinterest_url %>
-			<p><%= @profile.pinterest_url %></p>
-		<% end %>
+      </li>
 
-		<% if @profile.tumblr_url %>
-			<p><%= @profile.tumblr_url %></p>
-		<% end %>
+            <li>
+    
+        <% if @profile.pinterest_url %>
+          <p>
+            <a href="<%= @profile.pinterest_url %>" target="_blank"><img src="http://cloud-media.com/wp-content/uploads/2013/11/sumzy-pinterest-icon-sm1.png">
+            </p>
+        <% end %>
 
-		<% if @profile.soundcloud_url %>
-			<p><%= @profile.soundcloud_url %></p>
-		<% end %>
+      </li>
+
+            <li>
+    
+        <% if @profile.youtube_url %>
+          <p>
+            <a href="<%= @profile.youtube_url %>" target="_blank"><img src="http://cloud-media.com/wp-content/uploads/2013/11/sumzy-youtube-icon-sm1.png"></a>
+            </p>
+        <% end %>
+
+      </li>
+  </ul>
 
 
-		<p>
-			<%= @profile.bio %>
-		</p>
+<br />
+
+</div>
+
+<div>
 
 
 	<% if current_user.profile.id == @profile.id %>
 		<%= form_for @profile.microposts.new , url: {controller: :profiles, action: :post}   do |f| %>
-	   <%= f.label "What's up?" %>
-	   <%= f.text_field :content %>
-	   <%= f.submit "Post Status" %>
+	   <%= f.text_field :content, :class => "sign_up_text", :placeholder => "Post to everywhere." %>
+	   <%= f.submit "Post Status", :class => "sign_up_text" %>
 		<% end %>
 	<% end %>
 
@@ -66,3 +81,25 @@
 	<% end %>
 
 </div>
+
+<div>
+			<p>
+		<% if current_user.profile.id == @profile.id %>
+
+		<%= @profile.first_name %> <%= @profile.last_name %>  |
+
+		<%= link_to "Edit Profile", edit_profile_path %>  |
+
+		<%= link_to "Sign out", signout_path %> 
+
+	<% end %>
+	</p>
+
+
+		<p>
+			<%= @profile.bio %>
+		</p>
+
+</div>
+
+
