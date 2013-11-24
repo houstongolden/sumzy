@@ -1,4 +1,4 @@
-<div class="container">
+<div class="navbar">
 
   <ul class="nav" style="margin-top: -5px;">
     <li><a href="/">
@@ -14,17 +14,22 @@
 
   <ul class="nav pull-right" style="margin-top: 6px;">
 
-  <li><%= link_to 'About', :controller => "pages", :action => "about" %></li>
+    <li><%= link_to 'About', pages_about_path%></li>
+    <li><%= link_to 'Dashboard', pages_dashboard_path%></li>
+    <li><%= link_to 'Inbox', pages_inbox_path%></li>
+    <li><%= link_to 'Help', pages_help_path%></li>
+    <li><%= link_to 'Settings', pages_settings_path%></li>
 
-  <% if current_user %>
-    <%= "#{current_user.first_name} in the house" %>
+    <% if current_user %>
+      <%= "#{current_user.first_name}" %>
 
-       <%= link_to(image_tag("http://icons.iconarchive.com/icons/visualpharm/ios7v2/48/Users-User-male-2-icon.png"), profile_path(current_user), :class => "profile_link") %>
+         <%= link_to(image_tag("http://icons.iconarchive.com/icons/visualpharm/ios7v2/48/Users-User-male-2-icon.png"), profile_path(current_user), :class => "profile_link") %>
 
-    <%= link_to "Sign out", signout_path %>
-  <% else %>
-    <%= link_to "Sign in", new_session_path %>
-  <% end %>
+      <%= link_to "Sign out", signout_path %>
+    <% else %>
+      <%= link_to "Sign in", new_session_path %>
+    <% end %>
+
   </ul>
 
 

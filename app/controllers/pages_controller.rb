@@ -6,13 +6,17 @@ class PagesController < ApplicationController
 	def about
 	end
 
-	def alums
+	def help
 	end
 
-	def projects
+	def dashboard
 	end
 
-	def locations
+	def inbox
 	end
+
+	def settings
+	end
+
 
 end
