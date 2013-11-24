@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
 
   after_create :create_profile
 
-  include Facebook
+  include FacebookHelper
+  include TwitterHelper
   
   def create_profile
     user = User.last

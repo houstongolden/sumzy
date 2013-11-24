@@ -1,4 +1,4 @@
-module Facebook
+module FacebookHelper
 
   def get_basic_info
     facebook_api_object.get_object("me")
