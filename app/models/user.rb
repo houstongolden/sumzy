@@ -31,6 +31,7 @@ class User < ActiveRecord::Base
     self.last_name = auth.info.last_name
     self.email = auth.info.email
     self.gender = auth.extra.raw_info.gender
+    self.location = auth.info.location
     self.remote_image_url = auth.info.image
     self.facebook_uid = auth.uid
     self.facebook_token = auth.credentials.token
