@@ -1,6 +1,12 @@
 class ProfilesController < ApplicationController
 	respond_to :html, :json
 
+  def post_to_social_network
+    current_user.post params[:post_id] if current_user.facebook_uid.present? 
+    current_user.post_on_twitter params[:post_id] if current_user.twitter_uid.present?
+    redirect_to root_url
+  end
+
 	def index
 		@profiles = Profile.all
 	end

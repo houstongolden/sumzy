@@ -8,7 +8,7 @@ Sumzy::Application.routes.draw do
 
   get '/feeds', to: 'feeds#index'
 
-
+  match '/profiles/post_to_social_network', to: 'profiles#post_to_social_network', via: :post
 
   get '/pages/about', to: 'pages#about'
   get '/pages/help', to: 'pages#help'
