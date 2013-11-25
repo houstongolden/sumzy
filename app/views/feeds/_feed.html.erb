@@ -1,7 +1,7 @@
 <div class='feed_item'>
   <%= feed_item['message'] %><br>
   
-  <img src="<%= feed_item['attachment']['media'][0]['src'] if feed_item.has_key?('attachment') && feed_item['attachment'].size > 1 %>">
+  <img src="<%= feed_item['attachment']['media'][0]['src'] if feed_item.has_key?('attachment') && feed_item['attachment'].size > 1 && feed_item['attachment'].has_key?('media') %>">
   <br />
-  <a href="<%= feed_item['attachment']['media'][0]['src'] if feed_item.has_key?('attachment') && feed_item['attachment'].size > 1 %>">via Facebook</a>
+  <a href="<%= feed_item['attachment']['media'][0]['src'] if feed_item.has_key?('attachment') && feed_item['attachment'].size > 1 && feed_item['attachment'].has_key?('media') %>">via Facebook</a>
 </div>
