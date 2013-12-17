@@ -1,6 +1,6 @@
 <h1 style="text-align: center; font-family: 'Raleway', sans-serif; margin-top: -100px;">Sumzy Feed</h1>
 
 <div id="feed_container">
-  <%= render partial: "feed", collection: @feeds, as: :feed_item %>
+  <%= render partial: "feed", collection: @facebook_feed, as: :feed_item %>
   <%= render partial: "twitter_feed", collection: @twitter_feed, as: :feed_item %>
 </div>
