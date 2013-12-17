@@ -23,6 +23,7 @@ class PagesController < ApplicationController
 	end
 
 	def music
+		
 	end
 
 	def videos

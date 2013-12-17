@@ -1,23 +1,28 @@
 <%# navigation styled for Twitter Bootstrap 3.0 %>
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
+<nav class="navbar navbar-default navbar-fixed-top" style="height: 66px; background-color: white; width: 100%; z-index: 20; border-bottom: none;">
+  <div class="container" style="background-color: white;">
+    <div class="navbar-header" style="background-color: white;">
 
-<img src="http://cloud-media.com/wp-content/uploads/2013/12/sumzy-color-circle-logo-navbar-button.png" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="float: left;">
+      <img src="http://cloud-media.com/wp-content/uploads/2013/12/sumzy-color-circle-logo-navbar-button.png" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="float: left; padding: 0px;"></img>
 
+      <ul class="nav_post">
+        <li>
+          <a href="/" class="navbar-brand" style="float: left; margin-top: -15px;"><img src="http://cloud-media.com/wp-content/uploads/2013/11/sumzy-navbar-logo-beta-3.png"></a> 
+        </li>
 
-<a href="/"><img src="http://cloud-media.com/wp-content/uploads/2013/12/sumzy-navbar-text-1.png" style="margin-top: 20px; float: left;"></a>
-
-<!-- POST CONTAINER -->
- <%# render "profiles/post_box" %>
+        <li style="float: right;">
+              <!-- POST CONTAINER -->
+          <%= render "profiles/post_box" %>
+        </li>
+      </ul>
 
     </div>
+
     <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav" style="text-align: left; margin-left: 20px; float: left;">
-        
+      
         <%= render 'layouts/drop_nav' %>
 
-      </ul>
+     
     </div>
   </div>
 </nav>

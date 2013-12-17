@@ -26,7 +26,7 @@
 
 
   
-    <nav>
+    <nav style="background-color: white; height: 67px; z-index: 20;">
         <%= render 'layouts/navigation' %>
     </nav>
 
@@ -38,10 +38,10 @@
     <br />
 
 
-    <main role="main">
+    <main role="main" style="background-color: white;">
 
-      <div class="container">
-        <div class="content">
+      <div class="container" style="background-color: white; height: 67px; z-index: 20;">
+        <div class="content" >
            <div class="row">
             
               <!-- added with Devise for login notifications -->
@@ -58,11 +58,14 @@
     </main>
 
 
-    <div id="footer">
+
+<!-- FOOTER LAYOUT - RENDER PARTIAL - *BUGGY* -->
+<!--     <div id="footer">
       <div class="container">
-        <p class="text-muted"><%= render 'layouts/footer' %></p>
+        <p class="text-muted">
+          <%# render 'layouts/footer' %></p>
       </div>
-    </div>
+    </div> -->
 
 
     <!-- Bootstrap core JavaScript
