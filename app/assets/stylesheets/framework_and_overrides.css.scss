@@ -1,11 +1,6 @@
 // import the CSS framework
 @import "bootstrap";
 
-@media (min-width: 990px) and (max-width: 991px) {
-   .navbar-collapse {
-       display: none !important;
-   }
-}
 
 // make all images responsive by default
 img {
