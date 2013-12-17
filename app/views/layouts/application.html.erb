@@ -13,6 +13,10 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
+
+
+
     <%= csrf_meta_tags %>
     <%= favicon_link_tag 'favicon.ico' %>
 
@@ -21,19 +25,11 @@
 
 
   
-    <%# application layout styled for Twitter Bootstrap 2.3 %>
-    <header class="navbar navbar-fixed-top">
-      <nav class="navbar-inner">
-        <div class="container">
-        <%= render 'layouts/top_navigation' %>
-        <br />
+    <nav>
         <%= render 'layouts/navigation' %>
-        </div>
-      </nav>
-    </header>
+    </nav>
 
-
-    <body style="background-color: white;">
+    <body>
 
     <br />
     <br />
@@ -54,10 +50,26 @@
            
           </div>
 
-            <%= render 'layouts/footer' %>
+            
    
         </div>
       </div>
     </main>
+
+
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted"><%= render 'layouts/footer' %></p>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="../../dist/js/bootstrap.min.js"></script>
+
   </body>
+
 </html>

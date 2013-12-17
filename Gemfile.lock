@@ -29,6 +29,8 @@ GEM
     arel (4.0.1)
     atomic (1.1.14)
     awesome_print (1.2.0)
+    bootstrap-sass (3.0.3.0)
+      sass (~> 3.2)
     buftok (0.1)
     builder (3.1.4)
     coderay (1.1.0)
@@ -181,6 +183,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  bootstrap-sass (>= 3.0.0.0)
   coffee-rails (~> 4.0.0)
   figaro
   jbuilder (~> 1.2)

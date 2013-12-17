@@ -1,0 +1,32 @@
+      <button>
+        <% if @profile.facebook_url %>
+            <a href="<%= @profile.facebook_url %>" target="_blank"><img src="http://cloud-media.com/wp-content/uploads/2013/11/sumzy-facebook-icon-sm1.png">
+            </a>
+        <% end %>
+      </button>
+
+      <button>
+        <% if @profile.twitter_url %>
+            <a href="<%= @profile.twitter_url %>" target="_blank"><img src="http://cloud-media.com/wp-content/uploads/2013/11/sumzy-twitter-icon-sm1.png">
+        <% end %>
+      </button> 
+
+      <button>
+        <% if @profile.tumblr_url %>
+            <a href="<%= @profile.tumblr_url %>" target="_blank"><img src="http://cloud-media.com/wp-content/uploads/2013/11/sumzy-tumblr-icon-sm1.png">    
+        <% end %>
+      </button>
+
+      <button>
+        <% if @profile.pinterest_url %>
+            <a href="<%= @profile.pinterest_url %>" target="_blank"><img src="http://cloud-media.com/wp-content/uploads/2013/11/sumzy-pinterest-icon-sm1.png">
+        <% end %>
+      </button>
+
+      <button>   
+        <% if @profile.youtube_url %>
+        
+            <a href="<%= @profile.youtube_url %>" target="_blank"><img src="http://cloud-media.com/wp-content/uploads/2013/11/sumzy-youtube-icon-sm1.png"></a>
+           
+        <% end %>
+      </button>

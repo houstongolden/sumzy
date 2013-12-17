@@ -1,64 +1,12 @@
-<div class="navbar" style="margin-top: -90px;">
-
-  <ul class="nav pull-left">
-
-      <li>
-            <% if @profile.facebook_url %>
-              <p>
-                <a href="<%= @profile.facebook_url %>" target="_blank"><img src="http://cloud-media.com/wp-content/uploads/2013/11/sumzy-facebook-icon-sm1.png">
-                </a>
-              </p>
-            <% end %>
-      </li>
-
-      <li>
-    
-        <% if @profile.twitter_url %>
-          <p>
-            <a href="<%= @profile.twitter_url %>" target="_blank"><img src="http://cloud-media.com/wp-content/uploads/2013/11/sumzy-twitter-icon-sm1.png">
-            </p>
-        <% end %>
-
-      </li> 
-
-            <li>
-    
-        <% if @profile.tumblr_url %>
-          <p>
-            <a href="<%= @profile.tumblr_url %>" target="_blank"><img src="http://cloud-media.com/wp-content/uploads/2013/11/sumzy-tumblr-icon-sm1.png">
-            </p>
-        <% end %>
-
-      </li>
-
-            <li>
-    
-        <% if @profile.pinterest_url %>
-          <p>
-            <a href="<%= @profile.pinterest_url %>" target="_blank"><img src="http://cloud-media.com/wp-content/uploads/2013/11/sumzy-pinterest-icon-sm1.png">
-            </p>
-        <% end %>
-
-      </li>
-
-            <li>
-    
-        <% if @profile.youtube_url %>
-          <p>
-            <a href="<%= @profile.youtube_url %>" target="_blank"><img src="http://cloud-media.com/wp-content/uploads/2013/11/sumzy-youtube-icon-sm1.png"></a>
-            </p>
-        <% end %>
-
-      </li>
-  </ul>
-
-
-<br />
-
+<div style="margin-top: -150px;">
+  <%= render "profiles/social_profiles" %>
 </div>
 
-<div>
+<br />
+<br />
 
+
+<div class="container">
 
 	<% if current_user.profile.id == @profile.id %>
     <%= form_tag(profiles_post_to_social_network_path, :method => "post") do %>
@@ -72,21 +20,24 @@
   <%= label_tag "Facebook" %>
 
 	<% if @profile.microposts.blank? == false %>
+
 		<div class="micro">
+
 			<h3>Status Updates:</h3>
 		<% @profile.microposts.each do |p| %>
-		  	<p class="posts">
-				<%= p.content %>
-			</p>
-		<% end %>
 
-		</div>
-	<% end %>
+    		  <p class="posts">
+    				<%= p.content %>
+    			</p>
 
-</div>
+		    <% end %>
+	   <% end %>
 
-<div>
-			<p>
+    </div>
+
+
+
+	<p>
 		<% if current_user.profile.id == @profile.id %>
 
 		<%= @profile.first_name %> <%= @profile.last_name %>  |
@@ -105,4 +56,10 @@
 
 </div>
 
+<br />
 
+
+
+<br /><br />
+<br /><br />
+<br /><br />
