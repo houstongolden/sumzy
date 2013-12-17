@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     if user.save
       session[:user_id] = user.id
     end
-    redirect_to root_url, notice: "Signed in!"
+    redirect_to feeds_path, notice: "Signed in!"
   end
   
   def destroy
