@@ -2,6 +2,7 @@ Sumzy::Application.routes.draw do
 
 
   root 'welcome#index'
+  get "/soundcloud_callback.html" => "welcome#soundcloud_callback"
   resources :sessions
   resources :users
   resources :profiles

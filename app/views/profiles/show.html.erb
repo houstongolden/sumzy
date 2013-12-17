@@ -1,4 +1,14 @@
-<div style="margin-top: -150px;">
+<div id="post_box" class="container" style="margin-top: -160px; padding-top: 20px; background-color: #d6ecff; height: 170px; width: 200px;">
+
+<%= render "profiles/post_box" %>
+
+</div>
+
+<br />
+<br />
+
+
+<div style="float: left;">
   <%= render "profiles/social_profiles" %>
 </div>
 
@@ -6,18 +16,14 @@
 <br />
 
 
-<div class="container">
 
-	<% if current_user.profile.id == @profile.id %>
-    <%= form_tag(profiles_post_to_social_network_path, :method => "post") do %>
-      <%= text_field_tag 'post_id','', :class => "sign_up_text", :placeholder => "Post to everywhere." %>
-	   <%= submit_tag "Post Status", :class => "sign_up_text" %>
-		<% end %>
-	<% end %>
-  <%= check_box_tag "twitter", true, true %>
-  <%= label_tag "Twitter" %>
-  <%= check_box_tag "facebook", true, true %>
-  <%= label_tag "Facebook" %>
+
+
+
+
+
+
+<div id="microposts" class="container">
 
 	<% if @profile.microposts.blank? == false %>
 

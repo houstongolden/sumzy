@@ -1,1 +1,16 @@
 <h1>Inbox</h1>
+
+
+<div class="container">
+	  <% if current_user.profile.id == @profile.id %>
+    <%= form_tag(profiles_post_to_social_network_path, :method => "post") do %>
+      <%= text_field_tag 'post_id','', :class => "sign_up_text", :placeholder => "Post to everywhere." %>
+     <%= submit_tag "Post Status", :class => "sign_up_text" %>
+    <% end %>
+  <% end %>
+  <%= check_box_tag "twitter", true, true %>
+  <%= label_tag "Twitter" %>
+  <%= check_box_tag "facebook", true, true %>
+  <%= label_tag "Facebook" %>
+
+</div>

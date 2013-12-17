@@ -1,12 +1,12 @@
 <%# add navigation links to this file %> 
-<li> 
-  <% if current_user %>
-    <%= link_to(image_tag(current_user.remote_image_url), profile_path(current_user), :class => "profile_img" ) %> 
-    <% else %>
-  <% end %>
-</li>
+
+
 
 <li><%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-home-navbar-icon-sm4.png"), feeds_path('feeds'), :class => "profile_link") %></li>
+
+<li style="display: inline;">
+      <%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-music-icon-sm5.png"), pages_music_path('music'), :class => "profile_link") %>
+</li>
 
 
 <li style="display: inline;">
@@ -15,7 +15,12 @@
 <li style="display: inline;"><%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-settings-navbar-icon-sm4.png"), edit_profile_path(current_user), :class => "profile_link") %></li>
 
 
-
+<li> 
+  <% if current_user %>
+    <%= link_to(image_tag(current_user.remote_image_url), profile_path(current_user), :class => "profile_img" ) %> 
+    <% else %>
+  <% end %>
+</li>
 
 
 
