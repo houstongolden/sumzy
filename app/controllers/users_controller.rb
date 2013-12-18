@@ -15,10 +15,11 @@ class UsersController < ApplicationController
 	end
 
 	def edit
-	end
+    @user = current_user
+  end
 
 	def update
-	respond_with(@user)
+    @user.save
 	end
 
 	def destroy
