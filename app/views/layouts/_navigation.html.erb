@@ -1,15 +1,13 @@
 <%# navigation styled for Twitter Bootstrap 3.0 %>
-<nav class="navbar navbar-default navbar-fixed-top" style="height: 66px; background-color: white; width: 100%; z-index: 20; border-bottom: none;">
+<nav class="navbar navbar-default navbar-fixed-top" style="height: 66px; background-color: white; width: 100%; z-index: 20; border-bottom: none; opacity: .9;">
   <div class="container" style="background-color: white;">
     <div class="navbar-header" style="background-color: white;">
 
-      <img src="http://cloud-media.com/wp-content/uploads/2013/12/sumzy-color-circle-logo-navbar-button.png" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="float: left; padding: 0px;"></img>
+      <img src="<%= current_user.remote_image_url %>" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="float: left; padding: 0px;"></img>
+
 
       <ul class="nav_post">
-        <li>
-          <a href="/" class="navbar-brand" style="float: left; margin-top: -15px;"><img src="http://cloud-media.com/wp-content/uploads/2013/11/sumzy-navbar-logo-beta-3.png"></a> 
-        </li>
-
+        
         <li style="float: right;">
               <!-- POST CONTAINER -->
           <%= render "profiles/post_box" %>
@@ -29,7 +27,7 @@
 
 
 
-TWITTER BOOTSTRAP - TOGGLE BUTTON
+
 <!--      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
