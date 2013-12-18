@@ -3,13 +3,12 @@
   <div class="container" style="background-color: white;">
     <div class="navbar-header" style="background-color: white;">
 
-      <% if logged_in? %>
-      <img src="<%= current_user.remote_image_url %>" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="float: left; padding: 1px; margin-right: -18px; margin-left: 10px;"></img>
-      <% end %>
+      <img src="<%= current_user.remote_image_url %>" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="float: left; padding: 0px;"></img>
+
 
       <ul class="nav_post">
-
-        <li style="float: right; margin-right: 10px; margin-top: 10px;">
+        
+        <li style="float: right;">
               <!-- POST CONTAINER -->
           <%= render "profiles/post_box" %>
         </li>

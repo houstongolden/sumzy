@@ -1,6 +1,4 @@
-<ul class="nav navbar-nav">
-
-  <!-- style="text-align: center; margin-left: 20px; float: left; margin-top: -13px; background-color: white;" -->
+<ul class="nav navbar-nav" style="text-align: center; margin-left: 20px; float: left; margin-top: -13px; background-color: white;">
 
 	<li style="margin-top: 3px;"> 
 	  <% if current_user %>
@@ -9,9 +7,10 @@
 	  <% end %>
 	</li>
 
-<li><%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-home-navbar-icon-sm4.png"), feeds_path('feeds'), :class => "profile_link") %></li>
 
 <li style="display: inline;"><%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-settings-navbar-icon-sm4.png"), edit_user_path(current_user), :class => "profile_link") %></li>
+
+
 </ul>
 
 

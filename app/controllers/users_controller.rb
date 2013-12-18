@@ -20,7 +20,6 @@ class UsersController < ApplicationController
 
 	def update
     @user.save
-    redirect_to feeds_path
 	end
 
 	def destroy
