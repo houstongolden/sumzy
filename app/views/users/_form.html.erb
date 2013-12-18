@@ -1,0 +1,17 @@
+<%= form_for @user, html: {multipart: true} do |f| %>
+  <p>
+  	<%= f.label :first_name  %> <br>
+    <%= f.text_field :first_name, autofocus: true %>
+  </p>
+  <p>
+  	<%= f.label :last_name  %> <br>
+    <%= f.text_field :last_name, autofocus: true %>
+  </p>
+    <p>
+  	<%= f.label :email  %> <br>
+    <%= f.text_field :email %>
+  </p>
+
+  <%= f.submit  %>
+  
+<% end %>
