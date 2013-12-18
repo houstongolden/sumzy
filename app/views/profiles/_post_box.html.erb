@@ -1,13 +1,24 @@
-  <%# if current_user.profile.id == @profile.id %>
-    <%= form_tag(profiles_post_to_social_network_path, :method => "post") do %>
-      <%= text_field_tag 'post_id','', :class => "sign_up_text", :style => "border: 1px; width: 185px; background-color: #d6ecff", :placeholder => "Post sumthin'" %>
-     <%= submit_tag "Post", :class => "sign_up_text", :style => "color: #008AFF; margin-left: -5px; width: 50px; border: none; background: none;" %>
-    <%# end %>
-  <% end %>
+<div class="post_box_container"> 
+  <div style="text-align: center; margin-left: -10px;" class="social_checkboxes">
+    <span class="share_text">Share on:</span> <%= check_box_tag "twitter", true, true %>
+    <%= label_tag "Twitter" %>
+    <%= check_box_tag "facebook", true, true %>
+    <%= label_tag "Facebook" %>
 
-<div style="text-align: center; margin-left: -10px;">
-  <%= check_box_tag "twitter", true, true %>
-  <%= label_tag "Twitter" %>
-  <%= check_box_tag "facebook", true, true %>
-  <%= label_tag "Facebook" %>
+    <%# if current_user.profile.id == @profile.id %>
+      <%= form_tag(profiles_post_to_social_network_path, :method => "post") do %>
+        <%= text_field_tag 'post_id','', :class => "post_box_text", :placeholder => "Post sumthin'" %>
+      <%# end %>
+
+    <span class="btn btn-default btn-lg">
+       <span class="glyphicon glyphicon-send">
+        <%= submit_tag "Post", :class => "post_button" %>
+      </span>
+    </span>
+
+
+    <% end %>
+
 </div>
+</div>
+

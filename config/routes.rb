@@ -20,6 +20,7 @@ Sumzy::Application.routes.draw do
   get '/pages/music', to: 'pages#music'
   get '/pages/photos', to: 'pages#photos'
   get '/pages/videos', to: 'pages#videos'
+  get '/pages/post', to: 'pages#post'
 
 
 

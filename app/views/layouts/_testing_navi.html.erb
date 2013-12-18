@@ -1,0 +1,81 @@
+<%# navigation styled for Twitter Bootstrap 3.0 %>
+<div class="row">
+    <div class="col-12">
+        <div class="navbar">
+          <div class="navbar-inner">
+              <nav class="navbar navbar-default navbar-fixed-top" style="height: 66px; background-color: white; width: 100%; z-index: 20; border-bottom: none;">
+
+      <% if current_user %>
+      <img src="<%= current_user.remote_image_url %>" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="float: left; padding: 2px; margin-left: 3px; margin-right: -2px;"></img>
+      <% end %>
+
+            <ul class="nav" style="margin-left: -10px;">
+
+
+             <li class="active">
+                <%= link_to raw("<i class=\"glyphicon glyphicon-user\"></i>"), 
+                        profile_path(current_user), 
+                        class: "btn btn-default btn-lg",
+                        style: "border: none;",
+                        method: :get %>
+              </li>
+
+              <li class="active">
+                <%= link_to raw("<i class=\"glyphicon glyphicon-edit\"></i>"), 
+                        pages_post_path, 
+                        class: "btn btn-default btn-lg",
+                        style: "border: none;",
+                        method: :get %>
+              </li>
+
+              <li class="active">
+                <%= link_to raw("<i class=\"glyphicon glyphicon-list\"></i>"), 
+                        feeds_path, 
+                        class: "btn btn-default btn-lg",
+                        style: "border: none;",
+                        method: :get %>
+              </li>
+
+              <li class="active">
+                <%= link_to raw("<i class=\"glyphicon glyphicon-search\"></i>"), 
+                        profiles_path, 
+                        class: "btn btn-default btn-lg",
+                        style: "border: none;",
+                        method: :get %>
+              </li>
+
+              <li class="active">
+              <%= link_to raw("<i class=\"glyphicon glyphicon-cog\"></i>"), 
+                        edit_user_path(current_user), 
+                        class: "btn btn-default btn-lg",
+                        style: "border: none;",
+                        method: :get %>
+              </li>
+
+
+
+
+
+            </ul>
+
+            <div class="collapse navbar-collapse">
+              <%= render 'profiles/post_box' %>
+            </div>
+
+          </nav>
+          </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+<!--      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+ -->

@@ -1,27 +1,31 @@
 <%# navigation styled for Twitter Bootstrap 3.0 %>
-<nav class="navbar navbar-default navbar-fixed-top" style="height: 66px; background-color: white; width: 100%; z-index: 20; border-bottom: none; opacity: .9;">
+<nav class="navbar navbar-default navbar-fixed-top" style="height: 66px; background-color: white; width: 100%; z-index: 20; border-bottom: none; padding-bottom: 20px;">
   <div class="container" style="background-color: white;">
     <div class="navbar-header" style="background-color: white;">
 
-      <img src="<%= current_user.remote_image_url %>" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="float: left; padding: 0px;"></img>
+      <% if current_user %>
+      <img src="<%= current_user.remote_image_url %>" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="float: left; padding: 2px; margin-left: 10px;"></img>
+      <% end %>
+
 
 
       <ul class="nav_post">
         
         <li style="float: right;">
               <!-- POST CONTAINER -->
-          <%= render "profiles/post_box" %>
+          <%# render "profiles/post_box" %>
         </li>
       </ul>
 
     </div>
 
-    <div class="collapse navbar-collapse">
-      
-        <%= render 'layouts/drop_nav' %>
 
-     
+    <div class="collapse navbar-collapse">
+        <%= render 'layouts/drop_nav' %>
     </div>
+
+
+
   </div>
 </nav>
 

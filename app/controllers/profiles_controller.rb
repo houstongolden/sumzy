@@ -2,10 +2,10 @@ class ProfilesController < ApplicationController
 	respond_to :html, :json
 
   def post_to_social_network
-    if current_user?(@profile.user_id)
+    # if current_user?(@profile.user_id)
       current_user.post params[:post_id] if current_user.facebook_uid.present? 
       current_user.post_on_twitter params[:post_id] if current_user.twitter_uid.present?
-    end
+    # end
     redirect_to feeds_path
   end
 

@@ -1,5 +1,19 @@
-@media (min-width: 0px) and (max-width: 992px) {
-   .navbar-brand {
+@media (min-width: 768px) and (max-width: 100000px) {
+   .post_box_text {
+       display: none !important;
+       transition: width 2s;
+   }
+}
+
+@media (min-width: 768px) and (max-width: 100000px) {
+   .social_checkboxes {
+       display: none !important;
+       transition: width 2s;
+   }
+}
+
+@media (min-width: 768px) and (max-width: 100000px) {
+   .post_button {
        display: none !important;
        transition: width 2s;
    }
@@ -7,32 +21,71 @@
 
 
 
-@media (max-width: 700px) {
-    .navbar-header {
-        float: none;
-    }
-    .navbar-toggle {
-        display: block;
-    }
-    .navbar-collapse {
-        border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-    }
-    .navbar-collapse.collapse {
-        display: none!important;
-    }
-    .navbar-nav {
-        float: none!important;
-        margin: 7.5px -15px;
-    }
-    .navbar-nav>li {
-        float: none;
-    }
-    .navbar-nav>li>a {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
+
+.post_box_text { 
+  width: 280px; 
+  height: 200px;
+  margin-left: 10px;
+  background-color: #d6ecff;
+  max-width: 250px;
+  max-width: 40em; 
+  max-width: 100ch;
+  word-wrap:break-word; 
+  padding: 1px;
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+
 }
+
+.post_button {
+  color: #008AFF;
+  background-color: white;
+  font-size: 18px;
+  padding: 2px;
+  border: none;
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+.post_button:hover {
+  background-color: #EBEBEB;
+}
+
+
+.share_text {
+  border-radius: 5px;
+  outline-width: 0;
+  color: #0296FF;
+  font-size: 18px;
+  padding: 10px;
+  margin-left: 20px;
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+
+.post_box_container {
+  background-color: white;
+  width: 295px;
+  margin-left: -5px;
+  margin-top: 10px;
+  padding-top: -5px;
+  border: 2px solid black;
+}
+
+@import url('http://getbootstrap.com/dist/css/bootstrap.css');
+
+.navbar .nav > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* Internet Explorer 7 compatibility */
+    *zoom:1;
+    vertical-align: top;
+}
+
 
 
 

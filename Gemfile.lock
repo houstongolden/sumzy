@@ -183,7 +183,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
-  bootstrap-sass (>= 3.0.0.0)
+  bootstrap-sass (~> 3.0.3.0)
   coffee-rails (~> 4.0.0)
   figaro
   jbuilder (~> 1.2)
@@ -196,7 +196,7 @@ DEPENDENCIES
   pry-rails
   rails (= 4.0.0)
   rails_12factor
-  sass-rails (~> 4.0.0)
+  sass-rails (>= 3.2)
   sdoc
   turbolinks
   twitter
