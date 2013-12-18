@@ -7,10 +7,27 @@
   	<%= f.label :last_name  %> <br>
     <%= f.text_field :last_name, autofocus: true %>
   </p>
-    <p>
+  <p>
   	<%= f.label :email  %> <br>
     <%= f.text_field :email %>
   </p>
+  <p>
+    <%= label_tag 'Facebook Account' %> <br>
+    <% if current_user.facebook_uid.present? %>
+      <%= link_to 'On', {}, :class => 'btn btn-success' %> 
+    <% else %>
+      <%= link_to 'Currently Off', {}, :class => 'btn btn-inverse' %> 
+    <% end %>
+  </p>  
+  <p>
+    <%= label_tag 'Twitter Account' %> <br>
+    <% if current_user.twitter_uid.present? %>
+      <%= link_to 'On', {}, :class => 'btn btn-success' %> 
+    <% else %>
+      <%= link_to 'Currently Off', {}, :class => 'btn btn-inverse' %> 
+    <% end %>
+  </p>  
+
 
   <%= f.submit  %>
   
