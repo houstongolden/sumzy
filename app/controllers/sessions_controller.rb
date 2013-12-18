@@ -7,15 +7,13 @@ class SessionsController < ApplicationController
   def create
     user = User.new
     user.from_omniauth(env["omniauth.auth"])
-    if user.save
-      session[:user_id] = user.id
-    end
+    log_in user
     redirect_to feeds_path, notice: "Signed in!"
   end
   
   def destroy
-    session[:user_id] = nil
-    redirect_to root_url, notice: "Signed out!"
+    log_out
+    redirect_to root_path, notice: "Signed out!"
   end
 
   def failure

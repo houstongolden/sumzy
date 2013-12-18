@@ -15,6 +15,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :twitter_uid
       t.string :twitter_token
       t.string :twitter_secret 
+      t.string :persistence_token
  
       t.timestamps
     end

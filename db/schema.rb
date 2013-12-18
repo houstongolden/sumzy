@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 20131123215810) do
     t.string   "twitter_uid"
     t.string   "twitter_token"
     t.string   "twitter_secret"
+    t.string   "persistence_token"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
