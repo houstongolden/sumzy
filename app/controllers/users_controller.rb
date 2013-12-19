@@ -19,7 +19,10 @@ class UsersController < ApplicationController
   end
 
 	def update
-    @user.save
+    	@user = current_user
+    	if @user.update_attributes(params.require(:user).permit(:first_name, :last_name, :email))
+    		redirect_to @user
+    	end
 	end
 
 	def destroy

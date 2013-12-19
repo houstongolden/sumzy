@@ -1,1 +1,18 @@
-<h1>Hello World</h1>
+<div class="center" style="margin-top: -200px;">
+
+	<img src="<%= @user.remote_image_url %>"></h2>
+
+	<h2>Hello <%= @user.first_name %><%= @user.last_name %>!!!</h2>
+
+	<h3><%= @user.location %></h3>
+
+	<br />
+
+	<%= @user.email %>
+	<%= @user.link %>
+	
+	<%= link_to "Sign out", signout_path, :class => "btn btn-block btn-lg btn-danger", :style => "width: 100px; margin: 0 auto; text-align: center;" %> 
+
+	
+</div>
+

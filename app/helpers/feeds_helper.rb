@@ -1,17 +1,5 @@
-class FeedsController < ApplicationController	
+module FeedsHelper
 
-	def index
-		@facebook_feed = current_user.get_facebook_feed if current_user.facebook_uid.present?
-  		@twitter_feed = current_user.get_twitter_feed if current_user.twitter_uid.present? 
-
-  		# @twitter_feed.map do |tweet|
-  		# 	linkify(tweet.to_s)
-  		# end
-
-	end
-	
-
-	private
 
 		def linkify(text)
 		newtext = text.gsub(/\b((https?:\/\/|ftps?:\/\/|mailto:|www\.)([A-Za-z0-9\-_=%&@\?\.\/]+))\b/) {
@@ -20,12 +8,12 @@ class FeedsController < ApplicationController
 			case match
 				when /^www/     then  "<a href=\"http://#{match}\">#{match}</a>"
 				when /^mailto/  then  "<a href=\"#{match}\">#{tail}</a>"
+				# when /^@/		then "<a href"\"http://twitter.com/#{match}\">#{match}</a>"
 				else 
 				"<a href=\"#{match}\">#{match}</a>"
 			end
 		}
 		newtext
-	end
-
+	end	
 
 end

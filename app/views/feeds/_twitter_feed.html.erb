@@ -1,5 +1,6 @@
-  
-<div class='feed_item'>
-  <%= feed_item[:text] %>
-</div>
 
+<div class='feed_item'>
+	<%= linkify(feed_item[:text]).html_safe %>
+
+	<%# feed_item[:entities][:media][0][:expanded_url] %>
+</div>
