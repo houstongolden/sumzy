@@ -5,7 +5,6 @@
           <div class="navbar-inner">
               <nav class="navbar navbar-default navbar-fixed-top" style="height: 66px; background-color: white; width: 100%; z-index: 20; border-bottom: none;">
 
-                <a href="/" class="navbar-brand" style="font-family: Raleway; font-size: 48px; margin-top: 10px;">Sumzy</a>
 
       <% if current_user %>
       <img src="<%= current_user.remote_image_url %>" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="float: left; padding: 2px; margin-left: 3px; margin-right: -2px;"></img>
@@ -40,6 +39,25 @@
               </li>
 
 
+          <li class="navbar-brand-icon2">
+                <%= link_to raw("<i class=\"glyphicon glyphicon-user\"></i>"), 
+                        profile_path(current_user), 
+                        class: "btn btn-default btn-lg",
+                        style: "border: none; font-size: 48px; height: 66px;",
+                        method: :get %>
+              </li>
+
+
+              <li class="navbar-brand-icon1">
+              <%= link_to raw("<i class=\"glyphicon glyphicon-cog\"></i>"), 
+                        edit_user_path(current_user), 
+                        class: "btn btn-default btn-lg",
+                        style: "border: none; font-size: 48px; height: 66px;",
+                        method: :get %>
+              </li>
+
+
+
 
 
 
@@ -52,6 +70,9 @@
             <div class="collapse user-dropdown">
               <%= render 'profiles/post_box' %>
             </div>
+          <ul class="nav" style="display: inline; float: right; margin-top: -70px; margin-right: 50px;">
+            <li><a href="/" class="navbar-brand" style="font-family: Raleway; font-size: 48px; margin-top: 10px;">Sumzy</a></li>
+          </ul>
 
           </nav>
           </div>

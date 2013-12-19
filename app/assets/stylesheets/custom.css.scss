@@ -5,9 +5,26 @@
    }
 }
 
-@media (min-width: 0px) and (max-width: 767px) {
+.navbar-brand-icons {
+  margin-top: -2px;
+}
+
+@media (min-width: 0px) and (max-width: 610px) {
+   .navbar-brand-icon1 {
+       display: none !important;
+   }
+}
+
+@media (min-width: 0px) and (max-width: 580px) {
+   .navbar-brand-icon2 {
+       display: none !important;
+   }
+}
+
+
+@media (min-width: 0px) and (max-width: 660px) {
    .navbar-brand {
-       display: none;
+       display: none !important;
    }
 }
 
