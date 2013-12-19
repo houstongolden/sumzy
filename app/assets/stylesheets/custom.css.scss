@@ -5,6 +5,12 @@
    }
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+   .navbar-brand {
+       display: none;
+   }
+}
+
 @media (min-width: 768px) and (max-width: 100000px) {
    .social_checkboxes {
        display: none !important;
@@ -19,7 +25,24 @@
    }
 }
 
+@media (min-width: 10000px) {
+   .navbar-toggle {
+      display: true !important;
+   }
+}
 
+.active {
+  float: right;
+}
+
+
+.profile_link_photo:hover {
+  background-color: #ebebeb;
+  width: 70px;
+  height: 80px;
+  padding: 10px;
+  margin-left: -20px;
+}
 
 
 .post_box_text { 
@@ -70,7 +93,7 @@
 .post_box_container {
   background-color: white;
   width: 295px;
-  margin-left: -5px;
+  margin-left: 5px;
   margin-top: 10px;
   padding-top: -5px;
   border: 2px solid black;

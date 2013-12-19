@@ -1,11 +1,25 @@
-<li style="display: inline;">
-  <%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-photos-navbar-icon-sm4.png"), pages_photos_path('photos'), :class => "profile_link") %>
-</li>
-<li style="display: inline;">
-  <%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-music-icon-sm5.png"), pages_music_path('music'), :class => "profile_link") %>
-</li>
-<li style="display: inline;">
-  <%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-video-navbar-icon-sm4.png"), pages_videos_path('videos'), :class => "profile_link") %>
-</li> 
+<ul style="list-style: none; float: left; margin-left: -25px; margin-top: -15px;" class="navbar-toggle">
 
-<li style="display: inline;"><%= link_to(image_tag("http://cloud-media.com/wp-content/uploads/2013/11/sumzy-messages-navbar-icon-sm4.png"), pages_inbox_path('inbox'), :class => "profile_link") %></li>
+
+		      <li class="active">
+                <%= link_to raw("<i class=\"glyphicon glyphicon-user\"></i>"), 
+                        profile_path(current_user), 
+                        class: "btn btn-default btn-lg",
+                        style: "border: none; font-size: 48px;",
+                        method: :get %>
+              </li>
+
+
+              <li>
+              <%= link_to raw("<i class=\"glyphicon glyphicon-cog\"></i>"), 
+                        edit_user_path(current_user), 
+                        class: "btn btn-default btn-lg",
+                        style: "border: none; font-size: 48px;",
+                        method: :get %>
+              </li>
+
+
+
+
+
+</ul>
