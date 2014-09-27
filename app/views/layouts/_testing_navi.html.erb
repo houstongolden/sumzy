@@ -7,19 +7,19 @@
 
 
       <% if current_user %>
-      <img src="<%= current_user.remote_image_url %>" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="float: left; padding: 2px; margin-left: 3px; margin-right: -2px;"></img>
+        <img src="<%= current_user.remote_image_url %>" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="float: left; padding: 2px; margin-left: 3px; margin-right: -2px;">
+        </img>
       <% end %>
 
 
       <% if current_user %>
-      <button type="button" class="btn btn-default btn-lg" data-toggle="collapse" data-target=".user-dropdown" style="font-size: 48px; height: 66px; float: left; padding: none; border: none; margin-left: 3px; margin-right: -2px;"> <span class="glyphicon glyphicon-edit"></span></button>
+        <button type="button" class="btn btn-default btn-lg" data-toggle="collapse" data-target=".user-dropdown" style="font-size: 48px; height: 66px; float: left; padding: none; border: none; margin-left: 3px; margin-right: -2px;">
+          <span class="glyphicon glyphicon-edit"></span>
+        </button>
       <% end %>
 
 
-
-
             <ul class="nav" style="margin-left: -10px;">
-
 
               <li class="active">
                 <%= link_to raw("<i class=\"glyphicon glyphicon-list\"></i>"), 
@@ -29,7 +29,6 @@
                         method: :get %>
               </li>
 
-
               <li>
                 <%= link_to raw("<i class=\"glyphicon glyphicon-search\"></i>"), 
                         profiles_path, 
@@ -37,7 +36,6 @@
                         style: "border: none; font-size: 48px; height: 66px;",
                         method: :get %>
               </li>
-
 
           <li class="navbar-brand-icon2">
                 <%= link_to raw("<i class=\"glyphicon glyphicon-user\"></i>"), 
@@ -56,20 +54,19 @@
                         method: :get %>
               </li>
 
-
-
-
-
-
             </ul>
+
 
             <div class="collapse navbar-collapse">
               <%= render 'layouts/side_drop_nav' %>
             </div>
 
+
             <div class="collapse user-dropdown">
               <%= render 'profiles/post_box' %>
             </div>
+
+            
           <ul class="nav" style="display: inline; float: right; margin-top: -70px; margin-right: 50px;">
             <li><a href="/" class="navbar-brand" style="font-family: Raleway; font-size: 48px; margin-top: 10px;">Sumzy</a></li>
           </ul>
@@ -82,12 +79,3 @@
     </div>
 </div>
 
-
-
-<!--      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
- -->
